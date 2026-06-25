@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Gesture figure sketch</title>
+  <desc id="desc">A loose blue gesture drawing of a figure in motion.</desc>
+  <rect width="900" height="1200" fill="#eee8dc"/>
+  <g fill="none" stroke="#456f89" stroke-linecap="round" opacity=".88">
+    <path d="M478 218c45 31 56 83 30 128-31 54-104 63-144 20-42-46-19-121 40-144 27-11 52-12 74-4z" stroke-width="22"/>
+    <path d="M439 384c-35 103-45 211-28 324" stroke-width="24"/>
+    <path d="M421 503c-88 32-152 91-192 177" stroke-width="20"/>
+    <path d="M448 514c84 51 158 118 223 201" stroke-width="20"/>
+    <path d="M412 701c-87 89-126 197-118 325" stroke-width="23"/>
+    <path d="M441 704c76 101 115 209 118 324" stroke-width="23"/>
+  </g>
+  <g fill="none" stroke="#b85f47" stroke-linecap="round" opacity=".55">
+    <path d="M278 278c139 30 252 101 341 213" stroke-width="12"/>
+    <path d="M242 804c123-63 261-82 414-56" stroke-width="12"/>
+    <path d="M555 255c59 117 71 248 36 393" stroke-width="10"/>
+  </g>
+</svg>
