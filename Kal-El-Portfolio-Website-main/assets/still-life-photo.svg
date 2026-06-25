@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Still life photograph</title>
+  <desc id="desc">A stylized still life photograph with window light.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1">
+      <stop offset="0" stop-color="#d8c7b0"/>
+      <stop offset="1" stop-color="#f3eadb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#wall)"/>
+  <rect x="0" y="590" width="1200" height="310" fill="#6f8467"/>
+  <path d="M0 250h430v340H0z" fill="#f8f4ea" opacity=".58"/>
+  <path d="M114 250v340M227 250v340M340 250v340M0 360h430M0 475h430" stroke="#c7b89f" stroke-width="8" opacity=".65"/>
+  <ellipse cx="676" cy="707" rx="252" ry="46" fill="#29372f" opacity=".25"/>
+  <path d="M568 399h213l-26 300H595z" fill="#34544b"/>
+  <path d="M594 430h160l-21 234H617z" fill="#f5e5cf"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M669 412c-41-92-16-176 75-252" stroke="#496b57" stroke-width="18"/>
+    <path d="M676 415c67-74 149-109 246-105" stroke="#496b57" stroke-width="16"/>
+    <path d="M664 414c-84-61-166-85-247-72" stroke="#496b57" stroke-width="16"/>
+  </g>
+  <g fill="#d7a747">
+    <ellipse cx="761" cy="168" rx="70" ry="35" transform="rotate(-39 761 168)"/>
+    <ellipse cx="925" cy="308" rx="82" ry="31" transform="rotate(9 925 308)"/>
+    <ellipse cx="415" cy="345" rx="78" ry="30" transform="rotate(-5 415 345)"/>
+  </g>
+</svg>
