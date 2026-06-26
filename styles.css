@@ -59,13 +59,10 @@ a {
 }
 
 .brand-mark {
-  align-items: center;
-  background: var(--ink);
   border-radius: 50%;
-  color: var(--paper);
-  display: inline-flex;
   height: 36px;
-  justify-content: center;
+  object-fit: cover;
+  object-position: center;
   width: 36px;
 }
 
@@ -490,9 +487,7 @@ h3 {
   }
 
   .hero-gallery {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
+    display: none;
   }
 
   .hero-gallery img,
