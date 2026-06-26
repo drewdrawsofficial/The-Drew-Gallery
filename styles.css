@@ -256,8 +256,8 @@ h3 {
 
 .category-grid {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .category-card {
@@ -265,7 +265,15 @@ h3 {
 }
 
 .category-card img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
+}
+
+.category-card div {
+  padding: 14px;
+}
+
+.category-card h3 {
+  font-size: 1.18rem;
 }
 
 .art-card {
@@ -437,9 +445,12 @@ h3 {
   .art-grid,
   .portfolio-grid,
   .gallery-grid,
-  .category-grid,
   .contact-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -516,9 +527,12 @@ h3 {
   .art-grid,
   .portfolio-grid,
   .gallery-grid,
-  .category-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .section-heading {
