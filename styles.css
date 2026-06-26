@@ -254,6 +254,20 @@ h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.category-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.category-card {
+  color: inherit;
+}
+
+.category-card img {
+  aspect-ratio: 4 / 3;
+}
+
 .art-card {
   background: var(--white);
   border: 1px solid rgba(32, 27, 22, 0.12);
@@ -423,6 +437,7 @@ h3 {
   .art-grid,
   .portfolio-grid,
   .gallery-grid,
+  .category-grid,
   .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -501,6 +516,7 @@ h3 {
   .art-grid,
   .portfolio-grid,
   .gallery-grid,
+  .category-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -511,7 +527,7 @@ h3 {
 
   .section-link {
     align-self: flex-start;
-  }git push origin main
+  }
 
   .hero-actions {
     align-items: stretch;

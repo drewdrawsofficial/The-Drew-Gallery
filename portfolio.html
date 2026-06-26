@@ -4,10 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio | The Drew Gallery</title>
-    <meta
-      name="description"
-      content="Portfolio categories for The Drew Gallery, including portraits, drawing portfolio, painting, black-and-white photography, color photography, events, and photoshoot series."
-    />
+    <meta name="description" content="Portfolio categories for The Drew Gallery." />
     <link rel="icon" href="assets/icon.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -27,15 +24,86 @@
     <main>
       <section class="page-hero">
         <p class="eyebrow">Portfolio</p>
-        <h1>Artwork and photos grouped by category.</h1>
+        <h1>Choose a category.</h1>
         <p>
-          Browse Drew's portrait work, drawing portfolio, paintings, black-and-white
-          photography, color work, events, and themed photoshoots.
+          Each category has its own page so the work is easier to browse on desktop
+          and mobile.
         </p>
-        <nav class="category-nav" id="portfolio-categories" aria-label="Portfolio categories"></nav>
       </section>
 
-      <div id="portfolio-root" aria-live="polite"></div>
+      <section class="portfolio-section" aria-labelledby="portfolio-categories-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Browse by section</p>
+            <h2 id="portfolio-categories-heading">Portfolio categories</h2>
+          </div>
+        </div>
+        <div class="category-grid">
+          <a class="art-card category-card" href="portraits.html">
+            <img src="assets/portraits/portraits%20%281%29.jpg" alt="Portraits preview" />
+            <div>
+              <p>Faces, expression, character</p>
+              <h3>Portraits</h3>
+            </div>
+          </a>
+          <a class="art-card category-card" href="drawing-portfolio.html">
+            <img src="assets/Drawing%20Port/drawing%20%281%29.jpg" alt="Drawing Portfolio preview" />
+            <div>
+              <p>Line work, studies, finished pieces</p>
+              <h3>Drawing Portfolio</h3>
+            </div>
+          </a>
+          <a class="art-card category-card" href="paint-portfolio.html">
+            <img src="assets/Paint%20port/painting%20%281%29.png" alt="Paint Portfolio preview" />
+            <div>
+              <p>Color, texture, composition</p>
+              <h3>Paint Portfolio</h3>
+            </div>
+          </a>
+          <a class="art-card category-card" href="black-and-white.html">
+            <img src="assets/b%26w/b%26w%20%281%29.jpg" alt="Black &amp; White preview" />
+            <div>
+              <p>Contrast, mood, detail</p>
+              <h3>Black &amp; White</h3>
+            </div>
+          </a>
+          <a class="art-card category-card" href="casual-color.html">
+            <img src="assets/casual%20color/casual-color%20%281%29.JPG" alt="Casual Color preview" />
+            <div>
+              <p>Color moments and everyday scenes</p>
+              <h3>Casual Color</h3>
+            </div>
+          </a>
+          <a class="art-card category-card" href="events-marketing.html">
+            <img src="assets/events%20%26%20marketing/event%26marketing%20%281%29.JPG" alt="Events &amp; Marketing preview" />
+            <div>
+              <p>Promotional and event photography</p>
+              <h3>Events &amp; Marketing</h3>
+            </div>
+          </a>
+          <a class="art-card category-card" href="couples-shoot.html">
+            <img src="assets/photoshoots/Couples%20Shoot/couples-shoot%20%281%29.JPG" alt="Couples Shoot preview" />
+            <div>
+              <p>Photoshoot series</p>
+              <h3>Couples Shoot</h3>
+            </div>
+          </a>
+          <a class="art-card category-card" href="halloween.html">
+            <img src="assets/photoshoots/Halloween/halloween%20%281%29.jpg" alt="Halloween preview" />
+            <div>
+              <p>Styled photoshoot series</p>
+              <h3>Halloween</h3>
+            </div>
+          </a>
+          <a class="art-card category-card" href="valentines.html">
+            <img src="assets/photoshoots/Valentines/valentines%20%281%29.JPG" alt="Valentines preview" />
+            <div>
+              <p>Styled photoshoot series</p>
+              <h3>Valentines</h3>
+            </div>
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -43,51 +111,5 @@
       <a href="contact.html">Contact Drew</a>
     </footer>
 
-    <script>
-      const portfolioCategories = [{"id":"portraits","label":"Portraits","kicker":"Faces, expression, character","items":[{"src":"assets/portraits/portraits%20%281%29.jpg"},{"src":"assets/portraits/portraits%20%282%29.JPG"},{"src":"assets/portraits/portraits%20%283%29.jpg"},{"src":"assets/portraits/portraits%20%284%29.jpg"},{"src":"assets/portraits/portraits%20%285%29.jpg"},{"src":"assets/portraits/portraits%20%286%29.jpg"},{"src":"assets/portraits/portraits%20%287%29.jpg"},{"src":"assets/portraits/portraits%20%288%29.jpg"},{"src":"assets/portraits/portraits%20%289%29.jpg"},{"src":"assets/portraits/portraits%20%2810%29.JPG"},{"src":"assets/portraits/portraits%20%2811%29.JPG"},{"src":"assets/portraits/portraits%20%2812%29.JPG"},{"src":"assets/portraits/portraits%20%2813%29.JPG"},{"src":"assets/portraits/portraits%20%2814%29.jpg"},{"src":"assets/portraits/portraits%20%2815%29.JPG"},{"src":"assets/portraits/portraits%20%2816%29.jpg"},{"src":"assets/portraits/portraits%20%2817%29.jpg"}]},{"id":"drawing-portfolio","label":"Drawing Portfolio","kicker":"Line work, studies, finished pieces","items":[{"src":"assets/Drawing%20Port/drawing%20%281%29.jpg"},{"src":"assets/Drawing%20Port/drawing%20%281%29.png"},{"src":"assets/Drawing%20Port/drawing%20%282%29.jpg"},{"src":"assets/Drawing%20Port/drawing%20%282%29.png"},{"src":"assets/Drawing%20Port/drawing%20%283%29.jpg"},{"src":"assets/Drawing%20Port/drawing%20%283%29.png"},{"src":"assets/Drawing%20Port/drawing%20%284%29.jpg"},{"src":"assets/Drawing%20Port/drawing%20%284%29.png"},{"src":"assets/Drawing%20Port/drawing%20%285%29.jpg"},{"src":"assets/Drawing%20Port/drawing%20%285%29.png"},{"src":"assets/Drawing%20Port/drawing%20%286%29.jpg"},{"src":"assets/Drawing%20Port/drawing%20%286%29.png"},{"src":"assets/Drawing%20Port/drawing%20%287%29.png"},{"src":"assets/Drawing%20Port/drawing%20%288%29.png"},{"src":"assets/Drawing%20Port/drawing%20%289%29.png"},{"src":"assets/Drawing%20Port/drawing%20%2810%29.png"},{"src":"assets/Drawing%20Port/drawing%20%2811%29.png"},{"src":"assets/Drawing%20Port/drawing%20%2812%29.png"},{"src":"assets/Drawing%20Port/drawing%20%2813%29.png"},{"src":"assets/Drawing%20Port/drawing%20%2814%29.png"}]},{"id":"paint-portfolio","label":"Paint Portfolio","kicker":"Color, texture, composition","items":[{"src":"assets/Paint%20port/painting%20%281%29.png"},{"src":"assets/Paint%20port/painting%20%282%29.png"},{"src":"assets/Paint%20port/painting%20%283%29.png"},{"src":"assets/Paint%20port/painting%20%284%29.png"},{"src":"assets/Paint%20port/painting%20%285%29.png"},{"src":"assets/Paint%20port/painting%20%286%29.png"},{"src":"assets/Paint%20port/painting%20%287%29.png"},{"src":"assets/Paint%20port/painting%20%288%29.png"},{"src":"assets/Paint%20port/painting%20%289%29.png"},{"src":"assets/Paint%20port/painting%20%2810%29.png"},{"src":"assets/Paint%20port/painting%20%2811%29.png"},{"src":"assets/Paint%20port/painting%20%2812%29.png"},{"src":"assets/Paint%20port/painting%20%2813%29.png"},{"src":"assets/Paint%20port/painting%20%2814%29.png"},{"src":"assets/Paint%20port/painting%20%2815%29.png"},{"src":"assets/Paint%20port/painting%20%2816%29.png"},{"src":"assets/Paint%20port/painting%20%2817%29.png"}]},{"id":"black-and-white","label":"Black & White","kicker":"Contrast, mood, detail","items":[{"src":"assets/b%26w/b%26w%20%281%29.jpg"},{"src":"assets/b%26w/b%26w%20%282%29.jpg"},{"src":"assets/b%26w/b%26w%20%283%29.jpg"},{"src":"assets/b%26w/b%26w%20%284%29.jpg"},{"src":"assets/b%26w/b%26w%20%285%29.jpg"},{"src":"assets/b%26w/b%26w%20%286%29.jpg"},{"src":"assets/b%26w/b%26w%20%287%29.jpg"},{"src":"assets/b%26w/b%26w%20%288%29.jpg"},{"src":"assets/b%26w/b%26w%20%289%29.jpg"},{"src":"assets/b%26w/b%26w%20%2810%29.jpg"},{"src":"assets/b%26w/b%26w%20%2811%29.jpg"},{"src":"assets/b%26w/b%26w%20%2812%29.jpg"},{"src":"assets/b%26w/b%26w%20%2813%29.jpg"}]},{"id":"casual-color","label":"Casual Color","kicker":"Color moments and everyday scenes","items":[{"src":"assets/casual%20color/casual-color%20%281%29.JPG"},{"src":"assets/casual%20color/casual-color%20%282%29.JPG"},{"src":"assets/casual%20color/casual-color%20%283%29.jpg"},{"src":"assets/casual%20color/casual-color%20%284%29.jpg"},{"src":"assets/casual%20color/casual-color%20%285%29.jpg"},{"src":"assets/casual%20color/casual-color%20%286%29.JPG"},{"src":"assets/casual%20color/casual-color%20%287%29.JPG"},{"src":"assets/casual%20color/casual-color%20%288%29.JPG"},{"src":"assets/casual%20color/casual-color%20%289%29.JPG"},{"src":"assets/casual%20color/casual-color%20%2810%29.JPG"},{"src":"assets/casual%20color/casual-color%20%2811%29.JPG"},{"src":"assets/casual%20color/casual-color%20%2812%29.JPG"},{"src":"assets/casual%20color/casual-color%20%2813%29.JPG"}]},{"id":"events-marketing","label":"Events & Marketing","kicker":"Promotional and event photography","items":[{"src":"assets/events%20%26%20marketing/event%26marketing%20%281%29.JPG"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%282%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%283%29.JPG"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%284%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%285%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%286%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%287%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%288%29.JPG"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%289%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%2810%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%2811%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%2812%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%2813%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%2814%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%2815%29.jpg"},{"src":"assets/events%20%26%20marketing/event%26marketing%20%2816%29.jpg"}]},{"id":"couples-shoot","label":"Couples Shoot","kicker":"Photoshoot series","items":[{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%281%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%282%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%283%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%284%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%285%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%286%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%287%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%288%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%289%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2810%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2811%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2812%29.jpg"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2813%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2814%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2815%29.jpg"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2816%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2817%29.jpg"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2818%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2819%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2820%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2821%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2822%29.JPG"},{"src":"assets/photoshoots/Couples%20Shoot/couples-shoot%20%2823%29.JPG"}]},{"id":"halloween","label":"Halloween","kicker":"Styled photoshoot series","items":[{"src":"assets/photoshoots/Halloween/halloween%20%281%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%282%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%283%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%284%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%285%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%286%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%287%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%288%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%289%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2810%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2811%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2812%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2813%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2814%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2815%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2816%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2817%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2818%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2819%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2820%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2821%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2822%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2823%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2824%29.jpg"},{"src":"assets/photoshoots/Halloween/halloween%20%2825%29.jpg"}]},{"id":"valentines","label":"Valentines","kicker":"Styled photoshoot series","items":[{"src":"assets/photoshoots/Valentines/valentines%20%281%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%282%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%283%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%284%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%285%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%286%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%287%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%288%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%289%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%2810%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%2811%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%2812%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%2813%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%2814%29.JPG"},{"src":"assets/photoshoots/Valentines/valentines%20%2815%29.JPG"}]}];
-      const categoryNav = document.querySelector('#portfolio-categories');
-      const portfolioRoot = document.querySelector('#portfolio-root');
-
-      function node(tag, className, text) {
-        const element = document.createElement(tag);
-        if (className) element.className = className;
-        if (text) element.textContent = text;
-        return element;
-      }
-
-      portfolioCategories.forEach((category) => {
-        const link = node('a', '', category.label);
-        link.href = `#${category.id}`;
-        categoryNav.append(link);
-
-        const section = node('section', 'portfolio-section');
-        section.id = category.id;
-        section.setAttribute('aria-labelledby', `${category.id}-heading`);
-
-        const heading = node('div', 'section-heading');
-        const headingText = node('div');
-        headingText.append(node('p', 'section-kicker', category.kicker));
-        const title = node('h2', '', category.label);
-        title.id = `${category.id}-heading`;
-        headingText.append(title);
-        const back = node('a', 'section-link', 'Categories');
-        back.href = '#portfolio-categories';
-        heading.append(headingText, back);
-
-        const grid = node('div', 'gallery-grid');
-        category.items.forEach((item) => {
-          const card = node('article', 'art-card gallery-card');
-          const image = document.createElement('img');
-          image.src = item.src;
-          image.alt = `${category.label} portfolio image`;
-          image.loading = 'lazy';
-          card.append(image);
-          grid.append(card);
-        });
-
-        section.append(heading, grid);
-        portfolioRoot.append(section);
-      });
-    </script>
   </body>
 </html>
