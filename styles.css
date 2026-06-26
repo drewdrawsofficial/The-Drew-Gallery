@@ -279,6 +279,13 @@ h3 {
   aspect-ratio: 1 / 1;
 }
 
+<<<<<<< HEAD
+=======
+.gallery-card {
+  min-width: 0;
+}
+
+>>>>>>> 7001d5b (Updated Portfolio)
 .art-card div {
   padding: 18px;
 }
@@ -427,6 +434,52 @@ h3 {
   }
 }
 
+@media (max-width: 760px) {
+  main {
+    overflow: visible;
+  }
+
+  .page-hero,
+  .portfolio-section,
+  .contact-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .category-nav {
+    flex-wrap: nowrap;
+    margin-left: -16px;
+    margin-right: -16px;
+    overflow-x: auto;
+    padding: 0 16px 8px;
+    scroll-padding-inline: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .gallery-card {
+    box-shadow: 0 8px 20px rgba(32, 27, 22, 0.08);
+    width: 100%;
+  }
+
+  .gallery-card img {
+    aspect-ratio: auto;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+}
+
 @media (max-width: 620px) {
   .site-header,
   .site-footer,
@@ -456,6 +509,14 @@ h3 {
   .gallery-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    gap: 12px;
+  }
+
+  .section-link {
+    align-self: flex-start;
   }
 
   .hero-actions {
