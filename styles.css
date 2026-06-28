@@ -417,6 +417,10 @@ h3 {
   line-height: 1.7;
 }
 
+.bio-body {
+  white-space: pre-line;
+}
+
 .bio-image {
   background: var(--white);
   border: 1px solid rgba(32, 27, 22, 0.12);

@@ -98,53 +98,14 @@
       <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">&gt;</button>
     </div>
 
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
-          if (!user) {
-            window.netlifyIdentity.on('login', () => {
-              document.location.href = 'admin/';
-            });
-          }
-        });
-      }
-    </script>
-
-    <script>
-      const featuredCards = Array.from(document.querySelectorAll('.samples .art-card'));
+      const featuredImages = Array.from(document.querySelectorAll('.samples .art-card img'));
       const lightbox = document.querySelector('#featured-lightbox');
       const lightboxImage = lightbox.querySelector('img');
       const closeButton = lightbox.querySelector('.lightbox-close');
       const previousButton = lightbox.querySelector('.lightbox-prev');
       const nextButton = lightbox.querySelector('.lightbox-next');
-      let featuredImages = [];
       let activeIndex = 0;
-
-      function updateFeaturedWork(items) {
-        items.slice(0, featuredCards.length).forEach((item, index) => {
-          const image = featuredCards[index].querySelector('img');
-          const label = featuredCards[index].querySelector('p');
-
-          if (item.src) image.src = item.src;
-          if (item.alt) image.alt = item.alt;
-          if (item.label) label.textContent = item.label;
-        });
-      }
-
-      async function loadFeaturedWork() {
-        try {
-          const response = await fetch('content/featured-work.json', { cache: 'no-store' });
-          if (!response.ok) return;
-
-          const data = await response.json();
-          if (Array.isArray(data.items)) {
-            updateFeaturedWork(data.items);
-          }
-        } catch (error) {
-          return;
-        }
-      }
 
       function showImage(index) {
         activeIndex = (index + featuredImages.length) % featuredImages.length;
@@ -166,14 +127,11 @@
         lightboxImage.src = '';
       }
 
-      function setupLightbox() {
-        featuredImages = Array.from(document.querySelectorAll('.samples .art-card img'));
-        featuredImages.forEach((image, index) => {
-          image.addEventListener('click', () => openLightbox(index));
-          image.addEventListener('contextmenu', (event) => event.preventDefault());
-          image.addEventListener('dragstart', (event) => event.preventDefault());
-        });
-      }
+      featuredImages.forEach((image, index) => {
+        image.addEventListener('click', () => openLightbox(index));
+        image.addEventListener('contextmenu', (event) => event.preventDefault());
+        image.addEventListener('dragstart', (event) => event.preventDefault());
+      });
 
       closeButton.addEventListener('click', closeLightbox);
       previousButton.addEventListener('click', () => showImage(activeIndex - 1));
@@ -188,7 +146,6 @@
         if (event.key === 'ArrowRight') showImage(activeIndex + 1);
       });
 
-      loadFeaturedWork().then(setupLightbox);
     </script>
   </body>
 </html>
