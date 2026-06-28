@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+collections:
+  - name: "home"
+    label: "Home"
+    files:
+      - name: "featured_work"
+        label: "Featured Work"
+        file: "content/featured-work.json"
+        format: "json"
+        fields:
+          - label: "Featured Work"
+            name: "items"
+            widget: "list"
+            min: 3
+            max: 3
+            fields:
+              - label: "Image"
+                name: "src"
+                widget: "image"
+              - label: "Label"
+                name: "label"
+                widget: "string"
+              - label: "Alt Text"
+                name: "alt"
+                widget: "string"
+                required: false
