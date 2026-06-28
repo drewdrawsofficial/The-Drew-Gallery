@@ -32,6 +32,8 @@ main {
 
 img {
   display: block;
+  -webkit-user-drag: none;
+  user-select: none;
   width: 100%;
 }
 
@@ -206,6 +208,22 @@ h3 {
   grid-row: 1 / 3;
 }
 
+.samples .art-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.samples .art-card img {
+  aspect-ratio: 1 / 1;
+}
+
+.samples .art-card div {
+  align-items: center;
+  display: flex;
+  min-height: 64px;
+}
+
 .intro,
 .samples,
 .portfolio-section,
@@ -257,7 +275,7 @@ h3 {
 .category-grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .category-card {
@@ -347,6 +365,63 @@ h3 {
   right: clamp(16px, 4vw, 34px);
   top: clamp(16px, 4vw, 34px);
   width: 44px;
+}
+
+.lightbox-arrow {
+  align-items: center;
+  background: rgba(255, 253, 248, 0.96);
+  border: 1px solid rgba(32, 27, 22, 0.18);
+  border-radius: 50%;
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 2.6rem;
+  font-weight: 400;
+  height: 54px;
+  justify-content: center;
+  line-height: 1;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+}
+
+.lightbox-prev {
+  left: clamp(14px, 3vw, 34px);
+}
+
+.lightbox-next {
+  right: clamp(14px, 3vw, 34px);
+}
+
+.bio-section {
+  align-items: center;
+  display: grid;
+  gap: clamp(28px, 5vw, 64px);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1180px;
+  padding: clamp(44px, 6vw, 84px) clamp(20px, 5vw, 36px);
+}
+
+.bio-copy p:not(.section-kicker) {
+  color: var(--muted);
+  font-size: clamp(1.02rem, 1.5vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.bio-image {
+  background: var(--white);
+  border: 1px solid rgba(32, 27, 22, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(32, 27, 22, 0.08);
+  overflow: hidden;
+}
+
+.bio-image img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .art-card div {
@@ -476,7 +551,8 @@ h3 {
 
 @media (max-width: 860px) {
   .hero,
-  .intro {
+  .intro,
+  .bio-section {
     grid-template-columns: 1fr;
   }
 
@@ -601,6 +677,20 @@ h3 {
 
   .lightbox img {
     max-height: 82vh;
-    max-width: 94vw;
+    max-width: 88vw;
+  }
+
+  .lightbox-arrow {
+    font-size: 2rem;
+    height: 42px;
+    width: 42px;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
   }
 }
