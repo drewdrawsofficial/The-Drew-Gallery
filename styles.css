@@ -302,6 +302,53 @@ h3 {
   min-width: 0;
 }
 
+.lightbox-enabled .gallery-card img {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  align-items: center;
+  background: rgba(20, 17, 14, 0.86);
+  display: none;
+  inset: 0;
+  justify-content: center;
+  padding: clamp(18px, 4vw, 48px);
+  position: fixed;
+  z-index: 20;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  background: var(--white);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+  max-height: 88vh;
+  max-width: min(92vw, 1120px);
+  object-fit: contain;
+  width: auto;
+}
+
+.lightbox-close {
+  align-items: center;
+  background: var(--white);
+  border: 1px solid rgba(32, 27, 22, 0.18);
+  border-radius: 50%;
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.6rem;
+  font-weight: 700;
+  height: 44px;
+  justify-content: center;
+  line-height: 1;
+  position: fixed;
+  right: clamp(16px, 4vw, 34px);
+  top: clamp(16px, 4vw, 34px);
+  width: 44px;
+}
+
 .art-card div {
   padding: 18px;
 }
@@ -546,5 +593,14 @@ h3 {
   .hero-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .lightbox {
+    padding: 14px;
+  }
+
+  .lightbox img {
+    max-height: 82vh;
+    max-width: 94vw;
   }
 }

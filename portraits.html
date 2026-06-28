@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/icon.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="lightbox-enabled">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="The Drew Gallery home">
         <img class="brand-mark" src="assets/icon.jpg" alt="" />
@@ -99,5 +99,43 @@
       <a href="portfolio.html">All categories</a>
     </footer>
 
+    <div class="lightbox" id="portrait-lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
+      <img src="" alt="" />
+    </div>
+
+    <script>
+      const lightbox = document.querySelector('#portrait-lightbox');
+      const lightboxImage = lightbox.querySelector('img');
+      const closeButton = lightbox.querySelector('.lightbox-close');
+
+      function openLightbox(image) {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        closeButton.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxImage.src = '';
+      }
+
+      document.querySelectorAll('.gallery-card img').forEach((image) => {
+        image.addEventListener('click', () => openLightbox(image));
+      });
+
+      closeButton.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('open')) {
+          closeLightbox();
+        }
+      });
+    </script>
   </body>
 </html>
