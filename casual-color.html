@@ -7,6 +7,12 @@
     <meta name="description" content="Casual Color portfolio page for The Drew Gallery." />
     <link rel="icon" href="assets/icon.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      if (localStorage.getItem('drewGalleryTheme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    </script>
+    <script src="theme-toggle.js" defer></script>
   </head>
   <body class="lightbox-enabled">
     <header class="site-header">

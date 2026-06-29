@@ -10,6 +10,12 @@
     />
     <link rel="icon" href="assets/icon.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      if (localStorage.getItem('drewGalleryTheme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    </script>
+    <script src="theme-toggle.js" defer></script>
   </head>
   <body class="lightbox-enabled">
     <header class="site-header">
@@ -40,7 +46,7 @@
           </div>
         </div>
         <div class="hero-gallery" aria-label="Featured artwork samples">
-          <img src="assets/Drawing Port/drawing (1).jpg" alt="Temp 1" />
+          <img src="assets/b&w/b&w (4).jpg" alt="Temp 1" />
           <img src="assets/casual color/casual-color (2).JPG" alt="Temp 2" />
           <img src="assets/portraits/portraits (3).jpg" alt="Temp 3" />
         </div>
@@ -58,13 +64,20 @@
         </p>
       </section>
 
-
-
-
       <!--
         ============================================================
         FEATURED WORK SECTION - EDIT THIS PART TO CHANGE THE 3 HOME PAGE SAMPLES
         ============================================================
+
+        HOW TO CHANGE A FEATURED WORK IMAGE:
+        1. Put the new image somewhere inside the assets folder.
+        2. Replace the img src="" value with the new image path.
+           Example: src="assets/portraits/portraits (3).jpg"
+        3. Replace the alt="" text with a short description of the image.
+        4. Replace the <p> label text with the category name visitors should see.
+
+        There are 3 featured work cards below. Each <article class="art-card">
+        is one featured sample.
       -->
       <section class="samples" id="samples" aria-labelledby="sample-heading">
         <div class="section-heading">
@@ -82,9 +95,9 @@
             ========================================================
           -->
           <article class="art-card">
-            <img src="assets/Paint port/painting (2).png" alt="Painting sample" />
+            <img src="assets/casual color/casual-color (3).jpg" alt="Photography sample" />
             <div>
-              <p>Painting</p>
+              <p>Photography</p>
             </div>
           </article>
 
@@ -98,7 +111,7 @@
             ========================================================
           -->
           <article class="art-card">
-            <img src="assets/photoshoots/Halloween/halloween (25).jpg" alt="Photography sample" />
+            <img src="assets/casual color/casual-color (12).JPG" alt="Photography sample" />
             <div>
               <p>Photography</p>
             </div>
@@ -114,7 +127,7 @@
             ========================================================
           -->
           <article class="art-card">
-            <img src="assets/b&w/b&w (11).jpg" alt="Black and white sample" />
+            <img src="assets/b&w/b&w (12).jpg" alt="Black and white sample" />
             <div>
               <p>Black & White</p>
             </div>
@@ -122,11 +135,6 @@
         </div>
       </section>
       <!-- END FEATURED WORK SECTION -->
-
-
-
-
-      
     </main>
 
     <footer class="site-footer">
