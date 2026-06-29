@@ -30,6 +30,11 @@
       setButtonLabel(button);
     });
 
-    document.body.appendChild(button);
+    const footer = document.querySelector('.site-footer');
+    if (footer) {
+      footer.appendChild(button);
+    } else {
+      document.body.appendChild(button);
+    }
   });
 })();

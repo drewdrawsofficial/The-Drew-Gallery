@@ -650,8 +650,6 @@ html.dark-mode .art-card img {
   background: var(--ink);
   border: 1px solid rgba(32, 27, 22, 0.16);
   border-radius: 999px;
-  bottom: clamp(14px, 3vw, 28px);
-  box-shadow: var(--shadow);
   color: var(--paper);
   cursor: pointer;
   display: inline-flex;
@@ -662,9 +660,6 @@ html.dark-mode .art-card img {
   justify-content: center;
   min-height: 42px;
   padding: 0 14px;
-  position: fixed;
-  right: clamp(14px, 3vw, 28px);
-  z-index: 30;
 }
 
 .theme-toggle::before {
