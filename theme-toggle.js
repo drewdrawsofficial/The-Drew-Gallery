@@ -32,7 +32,16 @@
 
     const footer = document.querySelector('.site-footer');
     if (footer) {
-      footer.appendChild(button);
+      let actions = footer.querySelector('.footer-actions');
+      if (!actions) {
+        const existingLinks = Array.from(footer.querySelectorAll(':scope > a'));
+        actions = document.createElement('div');
+        actions.className = 'footer-actions';
+        existingLinks.forEach((link) => actions.appendChild(link));
+        footer.appendChild(actions);
+      }
+
+      actions.insertBefore(button, actions.firstChild);
     } else {
       document.body.appendChild(button);
     }
